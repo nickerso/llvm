@@ -41,11 +41,14 @@ if (PTHREAD_LIBRARY_PATH)
   list(APPEND LIBS pthread)
 endif()
 
-add_llvm_library(gtest
+add_llvm_library(gtest_llvm
   googletest/src/gtest-all.cc
 
   LINK_LIBS
   ${LIBS}
 )
+# TODO replace above code by the line below - somehow the "add_llvm_library" acts different than plain "add_library",
+# as it somehow wont import the include directory from gtest correctly
+#find_package(GTEST REQUIRED)
 
 add_subdirectory(UnitTestMain)
