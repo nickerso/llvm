@@ -1,7 +1,7 @@
 # Replacement target using external gtest library - Daniel Wirtz
 find_package(GTEST REQUIRED)
-add_library(gtest_main UnitTestMain/TestMain.cpp)
-target_link_libraries(gtest_main gtest LLVMSupport)
+add_library(gtest_main_llvm UnitTestMain/TestMain.cpp)
+target_link_libraries(gtest_main_llvm gtest LLVMSupport)
 
 # -- old code --
 

@@ -650,7 +650,7 @@ function(add_unittest test_suite test_name)
   set_output_directory(${test_name} ${outdir} ${outdir})
   target_link_libraries(${test_name}
     gtest
-    gtest_main
+    gtest_main_llvm
     LLVMSupport # gtest needs it for raw_ostream.
     )
 

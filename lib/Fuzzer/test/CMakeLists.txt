@@ -51,7 +51,7 @@ add_executable(LLVMFuzzer-Unittest
 
 target_link_libraries(LLVMFuzzer-Unittest
   gtest
-  gtest_main
+  gtest_main_llvm
   )
 
 set(TestBinaries ${TestBinaries} LLVMFuzzer-Unittest)
