@@ -15,16 +15,20 @@
 ;
 ;===------------------------------------------------------------------------===;
 
-[component_0]
-type = Library
-name = gtest
-parent = Libraries
-required_libraries = Support
-installed = 0
 
-[component_1]
+; Modification by Daniel Wirtz: Using external gtest library,
+; and this is a quick fix that makes it compile
+
+;[component_0]
+;type = Library
+;name = gtest_llvm
+;parent = Libraries
+;required_libraries = Support
+;installed = 0
+
+[component_0]
 type = Library
 name = gtest_main
 parent = Libraries
-required_libraries = gtest
+;required_libraries = gtest
 installed = 0
